@@ -1,0 +1,17 @@
+<div class="card mb-4 shadow-sm mt20">
+    <div mat-card-avatar class="example-header-image"></div>
+    <div class="card-body">
+        <p class="card-text">
+            <strong>{{ productItem.name}}</strong>
+        </p>
+        <p class="card-text">
+            <strong>{{ productItem.price | currency: 'INR'}}</strong>
+        </p>
+        <p class="card-text truncate">{{ productItem.prodDesc }}</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+                <button mat-raised-button color="primary" class="mr20" (click)="handleAddToCart()">Add To Cart</button>
+                <button mat-raised-button color="accent" (click)="buyMedicine()">Buy</button>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,15 @@
+<div *ngIf = "cartItems.length == 0" class="alert alert-info mt20">Your Cart is empty !!!</div>
+<ul *ngIf = "cartItems.length > 0" class="list-group mt20 mt20">
+    <li class="list-group-item " *ngFor="let item of cartItems">
+        <app-cart-item [cartItem]="item"></app-cart-item>
+    </li>
+
+    <li class="list-group-item active">
+       <strong>Total: {{ cartTotal | currency : 'INR' }}</strong>
+
+    </li>
+    <div class="ml50 mt10">
+        <button mat-raised-button color="accent" (click)="buyMedicine()">Buy</button>
+    </div>
+</ul>
+

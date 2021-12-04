@@ -1,0 +1,5 @@
+<div class="container text-center mt20">
+    <input #myInput
+    type = "text" matInput placeholder="Item to search">
+    <button style="margin-left: 20px" mat-raised-button color="accent" [routerLink]="'/user-dashboard/search/'+myInput.value" >Search</button>   
+</div>

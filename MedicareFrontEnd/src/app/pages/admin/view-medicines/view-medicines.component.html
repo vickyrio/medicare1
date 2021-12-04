@@ -1,0 +1,34 @@
+<mat-card class="mt10 mr20 ml20" *ngFor="let m of medicines">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>
+                {{m.name}}
+            </mat-card-title>
+            <mat-card-subtitle>
+                {{m.category.title}}
+            </mat-card-subtitle>
+    </mat-card-header>
+<mat-card-content>
+    <p>{{m.prodDesc}}</p>
+</mat-card-content>
+<div class="row">
+    <div class="col-md-3">
+        <h6>Offers: {{m.offers}}</h6>    
+  </div>
+    <div class="col-md-3">
+        <h6>Price: {{m.price}}</h6>
+    </div>
+    <div class="col-md-3">
+        <h6>Active: {{m.active}}</h6>
+    </div>
+</div>
+
+
+<mat-card-actions>
+    <button mat-flat-button color="accent" class="ml20" (click)="removeMedicine(m.id)">Remove</button>
+    <button mat-flat-button color="accent" class="ml20" [routerLink]="'/admin/medicines/'+m.id">Update</button>
+</mat-card-actions>
+</mat-card>
+<div class="container text-center mt20">
+    <button mat-raised-button color="accent" class="ml20" routerLink="/admin/add-medicine">Add medicine</button>
+</div>

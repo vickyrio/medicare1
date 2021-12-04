@@ -1,0 +1,18 @@
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: password
+    url: jdbc:mysql://medicaredatabase.cofr6dqegueo.us-east-1.rds.amazonaws.com/medicareDB?allowPublicKeyRetrieval=true&useSSL=false
+    username: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true

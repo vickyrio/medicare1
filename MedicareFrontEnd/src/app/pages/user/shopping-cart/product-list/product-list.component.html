@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-md-4" *ngFor="let product of medicines">
+    <app-product-item [productItem]="product"></app-product-item>
+  </div>
+
+  <div class="alert alert-warning col-md-12" role="alert" *ngIf="medicines?.length == 0">
+    No Medicines found
+  </div>
+</div>
